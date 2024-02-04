@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const categoryRoutes = require('./routes/categoryRoutes');
+const productRoutes = require('./routes/productRoutes');
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -15,7 +16,7 @@ app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json());
 
 // Test endpoint
-app.get('/test', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Hello, this is a test endpoint!');
 });
 
@@ -31,6 +32,8 @@ db.once('open', () => {
 
 // Routes
 app.use('/api/category', categoryRoutes);
+// Routes
+app.use('/api/product', productRoutes);
 
 // Start the server
 app.listen(port, () => {

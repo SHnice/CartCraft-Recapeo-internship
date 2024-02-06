@@ -2,6 +2,7 @@ import Navbar from "./homepage/components/Navbar/Navbar";
 import Hero from "./homepage/components/Hero/Hero";
 import Products from "./homepage/components/Products/Products";
 import AOS from "aos";
+import React from "react";
 import "aos/dist/aos.css";
 import TopProducts from "./homepage/components/TopProducts/TopProducts";
 import Banner from "./homepage/components/Banner/Banner";
